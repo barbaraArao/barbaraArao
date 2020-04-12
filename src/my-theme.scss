@@ -1,0 +1,48 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$bv-hot: (50: #e9eaec,
+	100: #c8cacf,
+	200: #a3a7b0,
+	300: #7e8390,
+	400: #626978,
+	500: #464e60,
+	600: #3f4758,
+	700: #373d4e,
+	800: #FFA24C,
+	900: #DD1989,
+	A100: #7b9aff,
+	A200: #4873ff,
+	A400: #154cff,
+	A700: #003bfb,
+	contrast: (50: $black-87-opacity,
+		100: $black-87-opacity,
+		200: $black-87-opacity,
+		300: $black-87-opacity,
+		400: $black-87-opacity,
+		500: white,
+		600: white,
+		700: white,
+		800: white,
+		900: white,
+		A100: $black-87-opacity,
+		A200: $black-87-opacity,
+		A400: $black-87-opacity,
+		A700: white));
+
+
+	
+
+
+
+// Default colors
+$my-app-primary: mat-palette($bv-hot, 900);
+$my-app-accent: mat-palette($bv-hot, 800);
+
+$my-app-warn: mat-palette($mat-red, 600);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
